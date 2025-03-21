@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/checklist.png" type="image/x-icon">
+    <title>Stay Organized with Our Travel Checklist</title>
+    <link rel="stylesheet" href="./upcoming.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/d06933270a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="largeScreenNavbar">
+            <div class="titleContainer">
+                <li class="title">WanderWise</li>
+            </div>
+            <div class="itemContainers">
+                <a href="../index.html">
+                    <li class="nav-item">HOME</li>
+                </a>
+                <a href="#dataContainer">
+                    <li class="nav-item">ABOUT US</li>
+                </a>
+                <!-- <li class="nav-item" onclick="checklist()">CHECK LIST</li> -->
+                <li class="nav-item" onclick="profile()">PROFILE</li>
+            </div>
+        </nav>
+        <span class="hamburger" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></span>
+        <nav class="sidebar" id="sidebar">
+            <span onclick="closeSidebar()"><i class="fa-solid fa-xmark"></i></span>
+            <a href="../index.html">
+                <li class="nav-item">HOME</li>
+            </a>
+            <a href="">
+                <li class="nav-item">About Us</li>
+            </a>
+            <li class="nav-item" onclick="checklist()">Checklist</li>
+            <li class="nav-item" onclick="profile()">Profile</li>
+        </nav>
+    </header>
+    <div id="userDetails">
+        <span onclick="closeProfile()"><i class="fa-solid fa-xmark"></i></span>
+        <img src="../images/profile.png" id="profileImg">
+        <span id="user">USERNAME: <span id="userName">GUEST</span></span>
+        <span id="email">Email: <span id="userEmail">guest@gmail.com</span></span>
+        <button class="logout" id="loginbtn" onclick="logInOut()">LOGIN</button>
+    </div>
+    <!-- Main Content -->
+    <div class="mainContainer">
+        <div class="btnContainer">
+            <button onclick="getResturants()">Restrurants</button>
+            <button onclick="getHotels()">HOTELS</button>
+            <button onclick="getLocations()">Locations</button>
+        </div>
+        <div id="dataContainer"></div>
+    </div>
+    <script src="./upcoming.js"></script>
+</body>
+
+</html>

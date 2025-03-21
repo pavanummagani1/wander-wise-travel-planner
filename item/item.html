@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="item.css"> 
+        <!--  -->
+        <script src="https://kit.fontawesome.com/d06933270a.js" crossorigin="anonymous"></script>
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    
+        <!-- jQuery (Required) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <!-- Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="largeScreenNavbar">
+            <div class="titleContainer">
+                <li class="title">WanderWise</li>
+            </div>
+            <div class="itemContainers">
+                <a href="../index.html">
+                    <li class="nav-item">HOME</li>
+                </a>
+                <a href="">
+                    <li class="nav-item">ABOUT US</li>
+                </a>
+                <li class="nav-item" onclick="checklist()">CHECK LIST</li>
+                <li class="nav-item" onclick="profile()">PROFILE</li>
+            </div>
+        </nav>
+        <span class="hamburger" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></span>
+        <nav class="sidebar" id="sidebar">
+            <span onclick="closeSidebar()"><i class="fa-solid fa-xmark"></i></span>
+            <a href="">
+                <li class="nav-item">HOME</li>
+            </a>
+            <a href="">
+                <li class="nav-item">About Us</li>
+            </a>
+            <li class="nav-item" onclick="checklist()">Checklist</li>
+            <li class="nav-item" onclick="profile()">Profile</li>
+        </nav>
+    </header>
+    <div id="userDetails">
+        <span onclick="closeProfile()"><i class="fa-solid fa-xmark"></i></span>
+        <img src="../images/profile.png" id="profileImg">
+        <span id="user">USERNAME: <span id="userName">GUEST</span></span>
+        <span id="email">Email: <span id="userEmail">guest@gmail.com</span></span>
+        <button class="logout" id="loginbtn" onclick="logInOut()">LOGIN</button>
+    </div>
+    <div id="mainContainer">
+    </div>
+
+
+        <!-- BOOK NOW MODAL -->
+        <div id="modalContainer" class="modal">
+            <div class="modal-content">
+                <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+                <h2 id="modalTitle">Booking Confirmation</h2>
+                <!-- <label for="title">Title</label>
+                <input type="text" id="title"> -->
+                <label for="date">DATE</label>
+                <input type="date" id="date">
+                <label for="payment">PAYMENT MODES</label>
+                <select name="" id="payment">
+                    <option value="cash">CASH</option>
+                    <option value="UPI">UPI</option>
+                    <option value="cards">CREDIT & DEBIT Cards</option>
+                </select>
+                <p id="modalMessage">Do you want to proceed?</p>
+                <button id="confirmBtn" >Confirm</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+        <span id="bookingconfrimMessage"></span>
+    <script src="item.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
